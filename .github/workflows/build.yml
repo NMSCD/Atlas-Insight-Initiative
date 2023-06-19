@@ -30,7 +30,7 @@ jobs:
       - name: Minify Code
         uses: Lenni009/minify-js@main
         with:
-          directory: dist/spa/assets
+          directory: dist/spa
           overwrite: true
 
       - name: Deploy to GitHub Pages
