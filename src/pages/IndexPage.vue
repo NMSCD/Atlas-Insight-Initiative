@@ -1,42 +1,43 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+    <MemberItem v-for="member in members"
+      :imgUrl="member.imgUrl"
+      :memberName="member.memberName"
+      :position="member.position"
+      :key="member.id"
+    />
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { Todo, Meta } from 'components/models'
-import ExampleComponent from 'components/ExampleComponent.vue'
-import { ref } from 'vue'
+import MemberItem from '../components/MemberItem.vue'
 
-const todos = ref<Todo[]>([
+let id = 0
+
+const members = [
   {
-    id: 1,
-    content: 'ct1'
+    id: id++,
+    memberName: 'Lenni',
+    imgUrl: 'src/assets/profilePictures/Lenni.png',
+    position: 'Script Kiddie'
   },
   {
-    id: 2,
-    content: 'ct2'
+    id: id++,
+    memberName: 'Cyberpunk2350',
+    imgUrl: '../assets/profilePictures/CP2350.png',
+    position: 'Network Guy'
   },
   {
-    id: 3,
-    content: 'ct3'
+    id: id++,
+    memberName: 'ThatBomberBoi',
+    imgUrl: '../assets/profilePictures/Bomber.png',
+    position: 'Expedition Hacker'
   },
   {
-    id: 4,
-    content: 'ct4'
-  },
-  {
-    id: 5,
-    content: 'ct5'
+    id: id++,
+    memberName: 'KhaozTopsy',
+    imgUrl: '../assets/profilePictures/Khaoz.png',
+    position: 'Magic Man'
   }
-])
-const meta = ref<Meta>({
-  totalCount: 1200
-})
+]
 </script>
