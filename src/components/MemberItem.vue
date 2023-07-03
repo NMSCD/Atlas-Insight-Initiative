@@ -3,9 +3,10 @@
     <q-img
       :src="props.imgUrl"
       spinner-color="white"
+      class="avatar"
     />
     <h3>{{ props.memberName }}</h3>
-    <div>{{ props.position }}</div>
+    <p>{{ props.position }}</p>
   </div>
 </template>
 
@@ -17,16 +18,28 @@ const props = defineProps({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .member-item {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
     text-align: center;
+    background-color: #eee;
+    border-radius: .5rem;
+    width: 15rem;
+    height: 20rem;
   }
 
   h3 {
     font-size: 2rem;
+    margin-block: auto;
   }
 
-  img {
-    width: 250px;
+  .avatar {
+    width: 100%;
+    border-radius: .5rem .5rem 0 0;
+  }
+
+  p {
+    margin-block: auto;
   }
 </style>

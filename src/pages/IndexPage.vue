@@ -1,11 +1,11 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <MemberItem v-for="member in members"
-      :imgUrl="member.imgUrl"
-      :memberName="member.memberName"
-      :position="member.position"
-      :key="member.id"
-    />
+  <q-page class="row items-center justify-evenly member-cards">
+      <MemberItem v-for="member in members"
+        :imgUrl="member.imgUrl"
+        :memberName="member.memberName"
+        :position="member.position"
+        :key="member.id"
+      />
   </q-page>
 </template>
 
@@ -41,3 +41,10 @@ const members = [
   }
 ]
 </script>
+
+<style lang="scss">
+  .member-cards {
+    align-items: start;
+    margin-block-start: 10rem;
+  }
+</style>
