@@ -5,7 +5,7 @@
       spinner-color="white"
       class="avatar"
     />
-    <h3>{{ props.memberName }}</h3>
+    <p class="heading">{{ props.memberName }}</p>
     <p>{{ props.position }}</p>
   </div>
 </template>
@@ -29,17 +29,18 @@ const props = defineProps({
     height: 20rem;
   }
 
-  h3 {
-    font-size: 2rem;
-    margin-block: auto;
-  }
-
   .avatar {
     width: 100%;
+    height: 200px;
     border-radius: .5rem .5rem 0 0;
+    user-select: none;
   }
 
   p {
-    margin-block: auto;
+    margin-block: 1rem .5rem;
+
+    &.heading {
+      font-size: 2rem;
+    }
   }
 </style>

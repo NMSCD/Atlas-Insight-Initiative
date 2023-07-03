@@ -24,7 +24,7 @@ const members = [
   {
     id: id++,
     memberName: 'Cyberpunk2350',
-    imgUrl: '../assets/profilePictures/CP2350.png',
+    imgUrl: 'src/assets/profilePictures/CP2350.png',
     position: 'Network Guy'
   },
   {
@@ -38,6 +38,24 @@ const members = [
     memberName: 'KhaozTopsy',
     imgUrl: '../assets/profilePictures/Khaoz.png',
     position: 'Magic Man'
+  },
+  {
+    id: id++,
+    memberName: 'Sphynxcolt',
+    imgUrl: '../assets/profilePictures/Sphynxcolt.png',
+    position: 'Art Boi'
+  },
+  {
+    id: id++,
+    memberName: 'Corvus',
+    imgUrl: '../assets/profilePictures/Corvus.png',
+    position: 'Professional Crow'
+  },
+  {
+    id: id++,
+    memberName: 'Blend3rman',
+    imgUrl: '../assets/profilePictures/Blend3rman.png',
+    position: 'Probably a person'
   }
 ]
 </script>
@@ -46,5 +64,7 @@ const members = [
   .member-cards {
     align-items: start;
     margin-block-start: 10rem;
+    gap: 2rem;
+    margin-inline: 2rem;
   }
 </style>
