@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout Repo
         uses: actions/checkout@v3
 
       - run: |
-          npm i
+          npm ci
           npm run build
           cd dist/spa
           touch .nojekyll
