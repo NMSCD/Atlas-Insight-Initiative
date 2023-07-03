@@ -4,6 +4,7 @@
       :src="props.imgUrl"
       spinner-color="white"
       class="avatar"
+      fit="contain"
     />
     <p class="heading">{{ props.memberName }}</p>
     <p>{{ props.position }}</p>
