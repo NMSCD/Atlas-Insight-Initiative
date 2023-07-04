@@ -18,43 +18,43 @@ const members = [
   {
     id: id++,
     memberName: 'Lenni',
-    imgUrl: 'src/assets/profilePictures/Lenni.png',
+    imgUrl: 'profilePictures/Lenni.png',
     position: 'Script Kiddie'
   },
   {
     id: id++,
     memberName: 'Cyberpunk2350',
-    imgUrl: 'src/assets/profilePictures/CP2350.png',
+    imgUrl: 'profilePictures/CP2350.png',
     position: 'Network Guy'
   },
   {
     id: id++,
     memberName: 'ThatBomberBoi',
-    imgUrl: '../assets/profilePictures/Bomber.png',
+    imgUrl: 'profilePictures/Bomber.gif',
     position: 'Expedition Hacker'
   },
   {
     id: id++,
     memberName: 'KhaozTopsy',
-    imgUrl: '../assets/profilePictures/Khaoz.png',
+    imgUrl: 'profilePictures/Khaoz.png',
     position: 'Magic Man'
   },
   {
     id: id++,
     memberName: 'Sphynxcolt',
-    imgUrl: '../assets/profilePictures/Sphynxcolt.png',
+    imgUrl: 'profilePictures/Sphynxcolt.png',
     position: 'Art Boi'
   },
   {
     id: id++,
     memberName: 'Corvus',
-    imgUrl: '../assets/profilePictures/Corvus.png',
+    imgUrl: 'profilePictures/Corvus.png',
     position: 'Professional Crow'
   },
   {
     id: id++,
     memberName: 'Blend3rman',
-    imgUrl: '../assets/profilePictures/Blend3rman.png',
+    imgUrl: 'profilePictures/Blend3rman.png',
     position: 'Probably a person'
   }
 ]
