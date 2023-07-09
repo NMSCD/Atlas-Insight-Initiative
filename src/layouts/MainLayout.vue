@@ -11,11 +11,9 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          About HG-NMS-API-RE-Team
-        </q-toolbar-title>
+        <q-toolbar-title class="title"> {{ route.meta.title }} </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>HG-NMS-API-RE-Team</div>
       </q-toolbar>
     </q-header>
 
@@ -25,27 +23,7 @@
       bordered
     >
       <q-list>
-        <q-item-label
-          header
-        >
-          Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-
-      <q-separator />
-
-      <q-list>
-        <q-item-label
-          header
-        >
-          Pages
-        </q-item-label>
+        <q-item-label header> Pages </q-item-label>
 
         <EssentialLinkInternal
           v-for="page in pages"
@@ -54,6 +32,17 @@
         />
       </q-list>
 
+      <q-separator />
+
+      <q-list>
+        <q-item-label header> Links </q-item-label>
+
+        <EssentialLink
+          v-for="link in essentialLinks"
+          :key="link.title"
+          v-bind="link"
+        />
+      </q-list>
     </q-drawer>
 
     <q-page-container>
@@ -63,43 +52,38 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import EssentialLink, { EssentialLinkProps } from 'components/EssentialLink.vue'
-import EssentialLinkInternal, { EssentialLinkInternalProps } from 'components/EssentialLinkInternal.vue'
+import { ref } from 'vue';
+import EssentialLink from 'components/EssentialLink.vue';
+import EssentialLinkInternal, { EssentialLinkInternalProps } from 'components/EssentialLinkInternal.vue';
+import { pages } from 'src/variables/objects';
+import { useRoute } from 'vue-router';
 
-const pages: EssentialLinkInternalProps[] = [
+const route = useRoute();
+
+const essentialLinks: EssentialLinkInternalProps[] = [
   {
     title: 'NMSCD',
     caption: 'Main Page',
     icon: 'img:https://raw.githubusercontent.com/NMSCD/About/master/logo/NMSCD.png',
-    link: '/nmscd'
+    link: 'https://nmscd.com',
   },
   {
     title: 'Github',
     caption: 'github.com/NMSCD',
     icon: 'code',
-    link: '/About'
-  }
-]
-
-const essentialLinks: EssentialLinkProps[] = [
-  {
-    title: 'NMSCD',
-    caption: 'Main Page',
-    icon: 'img:https://raw.githubusercontent.com/NMSCD/About/master/logo/NMSCD.png',
-    link: 'https://nmscd.com'
+    link: 'https://github.com/NMSCD',
   },
-  {
-    title: 'Github',
-    caption: 'github.com/NMSCD',
-    icon: 'code',
-    link: 'https://github.com/NMSCD'
-  }
-]
+];
 
-const leftDrawerOpen = ref(false)
+const leftDrawerOpen = ref(false);
 
-function toggleLeftDrawer () {
-  leftDrawerOpen.value = !leftDrawerOpen.value
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
+
+<style scoped lang="scss">
+.title {
+  text-align: center;
+}
+</style>

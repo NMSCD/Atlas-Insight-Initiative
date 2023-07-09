@@ -1,7 +1,5 @@
 /dist
-/src-capacitor
-/src-cordova
-/.quasar
 /node_modules
 .eslintrc.js
-/src-ssr
+babel.config.js
+vite.config.ts

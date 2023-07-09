@@ -1,70 +1,59 @@
 <template>
-  <q-page class="row items-center justify-evenly member-cards">
-      <MemberItem v-for="member in members"
-        :imgUrl="member.imgUrl"
-        :memberName="member.memberName"
-        :position="member.position"
-        :key="member.id"
-      />
+  <q-page class="row justify-evenly cards">
+    <router-link
+      class="link"
+      v-for="link in pages"
+      :to="(link.link as string)"
+      :key="link.link"
+    >
+      <q-card class="card">
+        <q-card-section>
+          <q-icon
+            :name="link.icon"
+            size="4rem"
+          />
+        </q-card-section>
+        <q-separator />
+        <q-card-section class="title">
+          {{ link.title }}
+        </q-card-section>
+        <q-card-section>
+          {{ link.caption }}
+        </q-card-section>
+      </q-card>
+    </router-link>
   </q-page>
 </template>
 
 <script setup lang="ts">
-import MemberItem from '../components/MemberItem.vue'
-
-let id = 0
-
-const members = [
-  {
-    id: id++,
-    memberName: 'Lenni',
-    imgUrl: 'profilePictures/Lenni.png',
-    position: 'Script Kiddie'
-  },
-  {
-    id: id++,
-    memberName: 'Cyberpunk2350',
-    imgUrl: 'profilePictures/CP2350.png',
-    position: 'Network Guy'
-  },
-  {
-    id: id++,
-    memberName: 'ThatBomberBoi',
-    imgUrl: 'profilePictures/Bomber.gif',
-    position: 'Expedition Hacker'
-  },
-  {
-    id: id++,
-    memberName: 'KhaozTopsy',
-    imgUrl: 'profilePictures/Khaoz.png',
-    position: 'Magic Man'
-  },
-  {
-    id: id++,
-    memberName: 'Sphynxcolt',
-    imgUrl: 'profilePictures/Sphynxcolt.png',
-    position: 'Art Boi'
-  },
-  {
-    id: id++,
-    memberName: 'Corvus',
-    imgUrl: 'profilePictures/Corvus.png',
-    position: 'Professional Crow'
-  },
-  {
-    id: id++,
-    memberName: 'Blend3rman',
-    imgUrl: 'profilePictures/Blend3rman.png',
-    position: 'Probably a person'
-  }
-]
+import { pages } from 'src/variables/objects';
 </script>
 
-<style lang="scss">
-  .member-cards {
-    align-items: start;
-    margin-block-start: 10rem;
-    gap: 2rem;
-    margin-inline: 2rem;
+<style scoped lang="scss">
+@use 'sass:color';
+.link {
+  text-decoration: none;
+}
+
+.card {
+  text-align: center;
+  width: 15rem;
+  transition: background-color 0.3s;
+
+  .title {
+    font-size: 1.75rem;
   }
+}
+
+.body--dark .card:hover {
+  background-color: color.scale(#222, $lightness: +10%);
+}
+.body--light .card:hover {
+  background-color: color.scale(#fff, $lightness: -10%);
+}
+
+.cards {
+  margin-block-start: 4rem;
+  gap: 1rem;
+}
 </style>
