@@ -1,7 +1,7 @@
 <template>
   <q-item
-  clickable
-  class="link-internal-wrapper"
+    clickable
+    class="link-internal-wrapper"
   >
     <router-link
       class="link-internal"
@@ -10,12 +10,13 @@
       <q-item-section
         v-if="icon"
         avatar
+        class="icon"
       >
         <q-icon :name="icon" />
       </q-item-section>
 
       <q-item-section>
-        <q-item-label>{{ title }}</q-item-label>
+        <q-item-label class="title">{{ title }}</q-item-label>
         <q-item-label caption>{{ caption }}</q-item-label>
       </q-item-section>
     </router-link>
@@ -32,21 +33,25 @@ export interface EssentialLinkInternalProps {
 withDefaults(defineProps<EssentialLinkInternalProps>(), {
   caption: '',
   link: '#',
-  icon: ''
-})
+  icon: '',
+});
 </script>
 
-<style lang="scss">
-  .link-internal-wrapper {
-    padding: 0;
-  }
+<style scoped lang="scss">
+.link-internal-wrapper {
+  padding: 0;
+}
 
-  .link-internal {
-    padding: 8px 16px;
-    display: flex;
-    flex-wrap: nowrap;
-    text-decoration: none;
-    color: black;
-    width: 100%;
-  }
+.link-internal {
+  padding: 8px 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+
+.body--dark .link-internal {
+  color: white;
+}
 </style>

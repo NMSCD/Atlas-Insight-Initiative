@@ -15,33 +15,38 @@
 const props = defineProps({
   imgUrl: String,
   memberName: String,
-  position: String
-})
+  position: String,
+});
 </script>
 
 <style scoped lang="scss">
-  .member-item {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    text-align: center;
-    background-color: #eee;
-    border-radius: .5rem;
-    width: 15rem;
-    height: 20rem;
-  }
+.member-item {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  text-align: center;
+  background-color: #eee;
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 20rem;
+}
 
-  .avatar {
-    width: 100%;
-    height: 200px;
-    border-radius: .5rem .5rem 0 0;
-    user-select: none;
-  }
+.body--dark .member-item {
+  background-color: #222;
+  color: white;
+}
 
-  p {
-    margin-block: 1rem .5rem;
+.avatar {
+  width: 100%;
+  height: 200px;
+  border-radius: 0.5rem 0.5rem 0 0;
+  user-select: none;
+}
 
-    &.heading {
-      font-size: 2rem;
-    }
+p {
+  margin-block: 1rem 0.5rem;
+
+  &.heading {
+    font-size: 2rem;
   }
+}
 </style>
