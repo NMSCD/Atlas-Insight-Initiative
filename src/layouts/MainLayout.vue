@@ -1,3 +1,35 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import EssentialLink from 'components/EssentialLink.vue';
+import EssentialLinkInternal from 'components/EssentialLinkInternal.vue';
+import { pages } from 'src/variables/objects';
+import { useRoute } from 'vue-router';
+import { EssentialLinkInternalProps } from '@/types/props';
+
+const route = useRoute();
+
+const essentialLinks: EssentialLinkInternalProps[] = [
+  {
+    title: 'NMSCD',
+    caption: 'Main Page',
+    icon: 'img:https://raw.githubusercontent.com/NMSCD/About/master/logo/NMSCD.png',
+    link: 'https://nmscd.com',
+  },
+  {
+    title: 'Github',
+    caption: 'github.com/NMSCD',
+    icon: 'code',
+    link: 'https://github.com/NMSCD',
+  },
+];
+
+const leftDrawerOpen = ref(false);
+
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
+}
+</script>
+
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
@@ -50,37 +82,6 @@
     </q-page-container>
   </q-layout>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-import EssentialLink from 'components/EssentialLink.vue';
-import EssentialLinkInternal, { EssentialLinkInternalProps } from 'components/EssentialLinkInternal.vue';
-import { pages } from 'src/variables/objects';
-import { useRoute } from 'vue-router';
-
-const route = useRoute();
-
-const essentialLinks: EssentialLinkInternalProps[] = [
-  {
-    title: 'NMSCD',
-    caption: 'Main Page',
-    icon: 'img:https://raw.githubusercontent.com/NMSCD/About/master/logo/NMSCD.png',
-    link: 'https://nmscd.com',
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/NMSCD',
-    icon: 'code',
-    link: 'https://github.com/NMSCD',
-  },
-];
-
-const leftDrawerOpen = ref(false);
-
-function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
-}
-</script>
 
 <style scoped lang="scss">
 .title {
