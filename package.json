@@ -1,8 +1,8 @@
 {
-  "name": "hg-api-re-team-website",
+  "name": "atlas-insight-initiative-website",
   "version": "0.0.1",
-  "description": "Website for the HG API reverse engineering team",
-  "productName": "HG-API-RE-Team-Website",
+  "description": "Website for the Atlas Insight Initiative",
+  "productName": "Atlas-Insight-Initiative-Website",
   "author": "NMSCD",
   "private": true,
   "scripts": {

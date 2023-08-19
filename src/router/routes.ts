@@ -18,14 +18,14 @@ const routes: RouteRecordRaw[] = [
       },
       {
         path: '/details',
-        component: () => import('pages/DetailStuff.vue'),
+        component: () => import('pages/Details.vue'),
         meta: {
           title: 'Details'
         }
       },
       {
         path: '/projects',
-        component: () => import('pages/ProjectStuff.vue'),
+        component: () => import('pages/Projects.vue'),
         meta: {
           title: 'Projects'
         }

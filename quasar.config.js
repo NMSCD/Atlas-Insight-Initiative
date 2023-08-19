@@ -58,7 +58,7 @@ module.exports = configure(function (/* ctx */) {
       },
 
       vueRouterMode: 'history', // available values: 'hash', 'history'
-      // vueRouterBase,
+      vueRouterBase: '/Atlas-Insight-Initiative/',
       // vueDevtools,
       // vueOptionsAPI: false,
 
@@ -74,7 +74,7 @@ module.exports = configure(function (/* ctx */) {
       // distDir
 
       extendViteConf(viteConf) {
-        viteConf.base = '/Atlas-Insight-Initiative'
+        viteConf.base = '/Atlas-Insight-Initiative/'
       }
       // viteVuePluginOptions: {},
 

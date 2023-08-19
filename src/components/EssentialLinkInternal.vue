@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { EssentialLinkInternalProps } from '@/types/props';
+withDefaults(defineProps<EssentialLinkInternalProps>(), {
+  caption: '',
+  link: '#',
+  icon: '',
+});
+</script>
+
 <template>
   <q-item
     clickable
@@ -22,20 +31,6 @@
     </router-link>
   </q-item>
 </template>
-
-<script setup lang="ts">
-export interface EssentialLinkInternalProps {
-  title: string;
-  caption?: string;
-  link?: string;
-  icon?: string;
-}
-withDefaults(defineProps<EssentialLinkInternalProps>(), {
-  caption: '',
-  link: '#',
-  icon: '',
-});
-</script>
 
 <style scoped lang="scss">
 .link-internal-wrapper {
