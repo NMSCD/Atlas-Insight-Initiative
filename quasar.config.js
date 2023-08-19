@@ -74,7 +74,7 @@ module.exports = configure(function (/* ctx */) {
       // distDir
 
       extendViteConf(viteConf) {
-        viteConf.base = './'
+        viteConf.base = '/Atlas-Insight-Initiative'
       }
       // viteVuePluginOptions: {},
 
