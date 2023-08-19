@@ -13,7 +13,7 @@
 
         <q-toolbar-title class="title"> {{ route.meta.title }} </q-toolbar-title>
 
-        <div>HG-NMS-API-RE-Team</div>
+        <div>Atlas Insight Initiative</div>
       </q-toolbar>
     </q-header>
 

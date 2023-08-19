@@ -1,5 +1,5 @@
 <template>
-  <q-page class="row items-center justify-evenly member-cards">
+  <q-page class="row items-center justify-evenly member-cards q-mx-xl">
     <MemberItem
       v-for="member in members"
       :imgUrl="member.imgUrl"
@@ -37,25 +37,25 @@ const members = [
   {
     id: id++,
     memberName: 'KhaozTopsy',
-    imgUrl: 'profilePictures/Khaoz.png',
+    imgUrl: 'profilePictures/Khaoz.webp',
     position: 'Magic Man',
   },
   {
     id: id++,
     memberName: 'Sphynxcolt',
-    imgUrl: 'profilePictures/Sphynxcolt.png',
+    imgUrl: 'profilePictures/Sphynxcolt.webp',
     position: 'Art Boi',
   },
   {
     id: id++,
     memberName: 'Corvus',
-    imgUrl: 'profilePictures/Corvus.png',
+    imgUrl: 'profilePictures/Corvus.webp',
     position: 'Professional Crow',
   },
   {
     id: id++,
     memberName: 'Blend3rman',
-    imgUrl: 'profilePictures/Blend3rman.png',
+    imgUrl: 'profilePictures/Blend3rman.webp',
     position: 'Probably a person',
   },
 ];
@@ -66,6 +66,5 @@ const members = [
   align-items: start;
   margin-block-start: 10rem;
   gap: 2rem;
-  margin-inline: 2rem;
 }
 </style>
