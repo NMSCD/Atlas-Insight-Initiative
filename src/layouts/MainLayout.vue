@@ -3,10 +3,11 @@ import { ref } from 'vue';
 import EssentialLink from 'components/EssentialLink.vue';
 import EssentialLinkInternal from 'components/EssentialLinkInternal.vue';
 import { pages } from 'src/variables/objects';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import { EssentialLinkInternalProps } from '@/types/props';
 
 const route = useRoute();
+const router = useRouter();
 
 const essentialLinks: EssentialLinkInternalProps[] = [
   {
@@ -41,6 +42,15 @@ function toggleLeftDrawer() {
           icon="menu"
           aria-label="Menu"
           @click="toggleLeftDrawer"
+        />
+
+        <q-btn
+          v-if="route.meta.title"
+          icon="arrow_back"
+          flat
+          dense
+          round
+          @click="router.push('/')"
         />
 
         <q-toolbar-title class="title"> {{ route.meta.title }} </q-toolbar-title>
