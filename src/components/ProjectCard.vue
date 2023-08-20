@@ -10,24 +10,28 @@ defineProps<{
 </script>
 
 <template>
-  <q-card>
+  <q-card class="text-center">
     <q-card-section>
-      <div class="text-h6 text-center">{{ heading }}</div>
+      <div class="text-h6">{{ heading }}</div>
     </q-card-section>
 
     <q-card-section class="q-pt-none">{{ description }}</q-card-section>
     <q-card-section>
       <q-list class="flex q-pt-m flex-center">
         <q-item
+          :class="{ 'link-item-border': $q.dark.isActive }"
           :href="url1"
-          class="q-btn"
+          class="q-btn justify-center rounded-borders"
+          target="_blank"
           tag="a"
           >{{ url1desc || url1 }}</q-item
         >
         <q-item
           v-if="url2"
+          :class="{ 'link-item-border': $q.dark.isActive }"
           :href="url2"
-          class="q-btn"
+          class="q-btn justify-center rounded-borders"
+          target="_blank"
           tag="a"
           >{{ url2desc || url2 }}</q-item
         >
@@ -39,6 +43,9 @@ defineProps<{
 <style scoped lang="scss">
 .flex {
   gap: 1rem;
-  align-items: center;
+}
+
+.link-item-border {
+  border: 1px solid $primary;
 }
 </style>

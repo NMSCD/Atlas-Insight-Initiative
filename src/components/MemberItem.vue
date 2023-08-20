@@ -21,10 +21,8 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .member-item {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
   text-align: center;
-  background-color: #eee;
+  background-color: $grey-1;
   border-radius: 0.5rem;
   width: 15rem;
   height: 20rem;
@@ -43,7 +41,7 @@ const props = defineProps({
 }
 
 p {
-  margin-block: 1rem 0.5rem;
+  margin: 1rem 0.5rem 0.5rem;
 
   &.heading {
     font-size: 2rem;

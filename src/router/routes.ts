@@ -10,10 +10,10 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/IndexPage.vue'),
       },
       {
-        path: '/about',
-        component: () => import('pages/About.vue'),
+        path: '/members',
+        component: () => import('pages/Members.vue'),
         meta: {
-          title: 'About'
+          title: 'Members'
         }
       },
       {

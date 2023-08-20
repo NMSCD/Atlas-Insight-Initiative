@@ -1,0 +1,37 @@
+[
+  {
+    "memberName": "Cyberpunk2350",
+    "imgUrl": "profilePictures/CP2350.png",
+    "position": "Network Guy"
+  },
+  {
+    "memberName": "ThatBomberBoi",
+    "imgUrl": "profilePictures/Bomber.gif",
+    "position": "Expedition Hacker"
+  },
+  {
+    "memberName": "KhaozTopsy",
+    "imgUrl": "profilePictures/Khaoz.webp",
+    "position": "Magic Man"
+  },
+  {
+    "memberName": "Lenni",
+    "imgUrl": "profilePictures/Lenni.png",
+    "position": "Script Kiddie"
+  },
+  {
+    "memberName": "Sphynxcolt",
+    "imgUrl": "profilePictures/Sphynxcolt.webp",
+    "position": "Art Boi"
+  },
+  {
+    "memberName": "Corvus",
+    "imgUrl": "profilePictures/Corvus.webp",
+    "position": "Professional Crow"
+  },
+  {
+    "memberName": "Blend3rman",
+    "imgUrl": "profilePictures/Blend3rman.webp",
+    "position": "Probably a person"
+  }
+]
