@@ -1,30 +1,33 @@
 <template>
-  <q-page class="row justify-evenly cards q-mt-xl">
-    <div v-for="link in pages">
-      <router-link
-        class="link"
-        :to="(link.link as string)"
-        :key="link.link"
-      >
-        <q-card
-          :class="{ 'color-black': !$q.dark.isActive }"
-          class="card"
+  <q-page>
+    <h1 class="text-center text-h3 q-my-xl">Atlas Insight Initiative</h1>
+    <div class="row justify-evenly cards">
+      <div v-for="link in pages">
+        <router-link
+          class="link"
+          :to="(link.link as string)"
+          :key="link.link"
         >
-          <q-card-section>
-            <q-icon
-              :name="link.icon"
-              size="4rem"
-            />
-          </q-card-section>
-          <q-separator />
-          <q-card-section class="title">
-            {{ link.title }}
-          </q-card-section>
-          <q-card-section>
-            {{ link.caption }}
-          </q-card-section>
-        </q-card>
-      </router-link>
+          <q-card
+            :class="{ 'color-black': !$q.dark.isActive }"
+            class="card"
+          >
+            <q-card-section>
+              <q-icon
+                :name="link.icon"
+                size="4rem"
+              />
+            </q-card-section>
+            <q-separator />
+            <q-card-section class="title">
+              {{ link.title }}
+            </q-card-section>
+            <q-card-section>
+              {{ link.caption }}
+            </q-card-section>
+          </q-card>
+        </router-link>
+      </div>
     </div>
   </q-page>
 </template>
