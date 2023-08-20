@@ -1,27 +1,31 @@
 <template>
-  <q-page class="row justify-evenly cards">
-    <router-link
-      class="link"
-      v-for="link in pages"
-      :to="(link.link as string)"
-      :key="link.link"
-    >
-      <q-card class="card">
-        <q-card-section>
-          <q-icon
-            :name="link.icon"
-            size="4rem"
-          />
-        </q-card-section>
-        <q-separator />
-        <q-card-section class="title">
-          {{ link.title }}
-        </q-card-section>
-        <q-card-section>
-          {{ link.caption }}
-        </q-card-section>
-      </q-card>
-    </router-link>
+  <q-page class="row justify-evenly cards q-mt-xl">
+    <div v-for="link in pages">
+      <router-link
+        class="link"
+        :to="(link.link as string)"
+        :key="link.link"
+      >
+        <q-card
+          :class="{ 'color-black': !$q.dark.isActive }"
+          class="card"
+        >
+          <q-card-section>
+            <q-icon
+              :name="link.icon"
+              size="4rem"
+            />
+          </q-card-section>
+          <q-separator />
+          <q-card-section class="title">
+            {{ link.title }}
+          </q-card-section>
+          <q-card-section>
+            {{ link.caption }}
+          </q-card-section>
+        </q-card>
+      </router-link>
+    </div>
   </q-page>
 </template>
 
@@ -53,7 +57,10 @@ import { pages } from 'src/variables/objects';
 }
 
 .cards {
-  margin-block-start: 4rem;
   gap: 1rem;
+}
+
+.color-black {
+  color: black;
 }
 </style>

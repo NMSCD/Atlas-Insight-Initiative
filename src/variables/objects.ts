@@ -5,7 +5,7 @@ export const pages: EssentialLinkProps[] = [
     title: 'Members',
     caption: 'Who we are',
     icon: 'group',
-    link: '/about',
+    link: '/members',
   },
   {
     title: 'Details',
