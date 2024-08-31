@@ -13,25 +13,25 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
-    "pinia": "^2.0.11",
-    "quasar": "^2.12.0",
+    "pinia": "^2.2.2",
+    "quasar": "^2.16.9",
     "sass": "^1.63.6",
-    "vue": "^3.3.4",
-    "vue-router": "^4.0.0"
+    "vue": "^3.4.38",
+    "vue-router": "^4.4.3"
   },
   "devDependencies": {
-    "@quasar/app-vite": "^1.0.0",
-    "@types/node": "^12.20.55",
+    "@quasar/app-vite": "^1.9.5",
+    "@types/node": "^22.5.1",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.10.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.0.0",
-    "typescript": "^4.9.5"
+    "typescript": "^5.5.4"
   },
   "engines": {
     "node": "^18 || ^16 || ^14.19",

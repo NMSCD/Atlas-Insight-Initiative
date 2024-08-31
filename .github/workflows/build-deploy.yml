@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: "build"
+  group: 'build'
   cancel-in-progress: true
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - run: |
           npm ci
