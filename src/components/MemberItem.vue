@@ -1,23 +1,23 @@
+<script setup lang="ts">
+defineProps<{
+  imgUrl: string;
+  memberName: string;
+  position: string;
+}>();
+</script>
+
 <template>
   <div class="member-item">
-    <q-img
-      :src="props.imgUrl"
+    <QImg
+      :src="imgUrl"
       spinner-color="white"
       class="avatar"
       fit="contain"
     />
-    <p class="heading">{{ props.memberName }}</p>
-    <p>{{ props.position }}</p>
+    <p class="heading">{{ memberName }}</p>
+    <p>{{ position }}</p>
   </div>
 </template>
-
-<script setup lang="ts">
-const props = defineProps({
-  imgUrl: String,
-  memberName: String,
-  position: String,
-});
-</script>
 
 <style scoped lang="scss">
 .member-item {

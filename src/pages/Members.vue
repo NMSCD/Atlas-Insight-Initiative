@@ -1,5 +1,10 @@
+<script setup lang="ts">
+import MemberItem from '@/components/MemberItem.vue';
+import members from '@/assets/members.json';
+</script>
+
 <template>
-  <q-page class="row items-center justify-evenly member-cards q-mx-xl q-mt-xl">
+  <QPage class="row items-center justify-evenly member-cards q-mx-xl q-mt-xl">
     <MemberItem
       v-for="member in members"
       :imgUrl="member.imgUrl"
@@ -8,15 +13,10 @@
       :key="member.memberName"
       class="shadow-1"
     />
-  </q-page>
+  </QPage>
 </template>
 
-<script setup lang="ts">
-import MemberItem from '../components/MemberItem.vue';
-import members from 'assets/members.json';
-</script>
-
-<style lang="scss">
+<style scoped lang="scss">
 .member-cards {
   align-items: start;
   gap: 2rem;

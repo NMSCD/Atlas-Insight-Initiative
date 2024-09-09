@@ -1,40 +1,43 @@
+<script setup lang="ts">
+import { pages } from '@/variables/objects';
+</script>
+
 <template>
-  <q-page>
+  <QPage>
     <h1 class="text-center text-h3 q-my-xl">Atlas Insight Initiative</h1>
     <div class="row justify-evenly cards">
-      <div v-for="link in pages">
-        <router-link
+      <div
+        v-for="link in pages"
+        :key="link.title"
+      >
+        <RouterLink
           class="link"
-          :to="(link.link as string)"
+          :to="link.link as string"
           :key="link.link"
         >
-          <q-card
+          <QCard
             :class="{ 'color-black': !$q.dark.isActive }"
             class="card"
           >
-            <q-card-section>
-              <q-icon
+            <QCardSection>
+              <QIcon
                 :name="link.icon"
                 size="4rem"
               />
-            </q-card-section>
-            <q-separator />
-            <q-card-section class="title">
+            </QCardSection>
+            <QSeparator />
+            <QCardSection class="title">
               {{ link.title }}
-            </q-card-section>
-            <q-card-section>
+            </QCardSection>
+            <QCardSection>
               {{ link.caption }}
-            </q-card-section>
-          </q-card>
-        </router-link>
+            </QCardSection>
+          </QCard>
+        </RouterLink>
       </div>
     </div>
-  </q-page>
+  </QPage>
 </template>
-
-<script setup lang="ts">
-import { pages } from 'src/variables/objects';
-</script>
 
 <style scoped lang="scss">
 @use 'sass:color';
