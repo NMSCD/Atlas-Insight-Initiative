@@ -1,0 +1,1 @@
+import{a as u}from"./vm-Cr4ZHExR.js";import{_ as i,b as m,g as s}from"./index-Bv0AtLjr.js";function f(){let t=null;const e=s();function o(){null!==t&&(clearTimeout(t),t=null)}return i(o),m(o),{removeTimeout:o,registerTimeout(r,i){o(),!1===u(e)&&(t=setTimeout((()=>{t=null,r()}),i))}}}export{f as u};
