@@ -10,34 +10,34 @@ defineProps<{
 </script>
 
 <template>
-  <q-card class="text-center">
-    <q-card-section>
+  <QCard class="text-center">
+    <QCardSection>
       <div class="text-h6">{{ heading }}</div>
-    </q-card-section>
+    </QCardSection>
 
-    <q-card-section class="q-pt-none">{{ description }}</q-card-section>
-    <q-card-section>
-      <q-list class="flex q-pt-m flex-center">
-        <q-item
+    <QCardSection class="q-pt-none">{{ description }}</QCardSection>
+    <QCardSection>
+      <QList class="flex q-pt-m flex-center">
+        <QItem
           :class="{ 'link-item-border': $q.dark.isActive }"
           :href="url1"
           class="q-btn justify-center rounded-borders"
           target="_blank"
           tag="a"
-          >{{ url1desc || url1 }}</q-item
+          >{{ url1desc || url1 }}</QItem
         >
-        <q-item
+        <QItem
           v-if="url2"
           :class="{ 'link-item-border': $q.dark.isActive }"
           :href="url2"
           class="q-btn justify-center rounded-borders"
           target="_blank"
           tag="a"
-          >{{ url2desc || url2 }}</q-item
+          >{{ url2desc || url2 }}</QItem
         >
-      </q-list>
-    </q-card-section>
-  </q-card>
+      </QList>
+    </QCardSection>
+  </QCard>
 </template>
 
 <style scoped lang="scss">

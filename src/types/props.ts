@@ -1,4 +1,4 @@
-export interface EssentialLinkInternalProps {
+export interface EssentialLinkProps {
   title: string;
   caption?: string;
   link?: string;

@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import EssentialLink from 'components/EssentialLink.vue';
-import EssentialLinkInternal from 'components/EssentialLinkInternal.vue';
-import { pages } from 'src/variables/objects';
+import EssentialLink from '@/components/EssentialLink.vue';
+import EssentialLinkInternal from '@/components/EssentialLinkInternal.vue';
+import { pages } from '@/variables/objects';
 import { useRoute, useRouter } from 'vue-router';
-import { EssentialLinkInternalProps } from '@/types/props';
+import { EssentialLinkProps } from '@/types/props';
 
 const route = useRoute();
 const router = useRouter();
 
-const essentialLinks: EssentialLinkInternalProps[] = [
+const essentialLinks: EssentialLinkProps[] = [
   {
     title: 'NMSCD',
     caption: 'Main Page',
@@ -32,10 +32,10 @@ function toggleLeftDrawer() {
 </script>
 
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
+  <QLayout view="lHh Lpr lFf">
+    <QHeader elevated>
+      <QToolbar>
+        <QBtn
           flat
           dense
           round
@@ -44,7 +44,7 @@ function toggleLeftDrawer() {
           @click="toggleLeftDrawer"
         />
 
-        <q-btn
+        <QBtn
           v-if="route.meta.title"
           icon="arrow_back"
           flat
@@ -53,44 +53,44 @@ function toggleLeftDrawer() {
           @click="router.push('/')"
         />
 
-        <q-toolbar-title class="title"> {{ route.meta.title }} </q-toolbar-title>
+        <QToolbarTitle class="title"> {{ route.meta.title }} </QToolbarTitle>
 
         <div>Atlas Insight Initiative</div>
-      </q-toolbar>
-    </q-header>
+      </QToolbar>
+    </QHeader>
 
-    <q-drawer
+    <QDrawer
       v-model="leftDrawerOpen"
       show-if-above
       bordered
     >
-      <q-list>
-        <q-item-label header> Pages </q-item-label>
+      <QList>
+        <QItemLabel header>Pages</QItemLabel>
 
         <EssentialLinkInternal
           v-for="page in pages"
           :key="page.title"
           v-bind="page"
         />
-      </q-list>
+      </QList>
 
-      <q-separator />
+      <QSeparator />
 
-      <q-list>
-        <q-item-label header> Links </q-item-label>
+      <QList>
+        <QItemLabel header>Links</QItemLabel>
 
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
         />
-      </q-list>
-    </q-drawer>
+      </QList>
+    </QDrawer>
 
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-  </q-layout>
+    <QPageContainer>
+      <RouterView />
+    </QPageContainer>
+  </QLayout>
 </template>
 
 <style scoped lang="scss">

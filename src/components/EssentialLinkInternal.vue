@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { EssentialLinkInternalProps } from '@/types/props';
-withDefaults(defineProps<EssentialLinkInternalProps>(), {
+import { EssentialLinkProps } from '@/types/props';
+
+withDefaults(defineProps<EssentialLinkProps>(), {
   caption: '',
   link: '#',
   icon: '',
@@ -8,28 +9,28 @@ withDefaults(defineProps<EssentialLinkInternalProps>(), {
 </script>
 
 <template>
-  <q-item
+  <QItem
     clickable
     class="link-internal-wrapper"
   >
-    <router-link
+    <RouterLink
       class="link-internal"
       :to="link"
     >
-      <q-item-section
+      <QItemSection
         v-if="icon"
         avatar
         class="icon"
       >
-        <q-icon :name="icon" />
-      </q-item-section>
+        <QIcon :name="icon" />
+      </QItemSection>
 
-      <q-item-section>
-        <q-item-label class="title">{{ title }}</q-item-label>
-        <q-item-label caption>{{ caption }}</q-item-label>
-      </q-item-section>
-    </router-link>
-  </q-item>
+      <QItemSection>
+        <QItemLabel class="title">{{ title }}</QItemLabel>
+        <QItemLabel caption>{{ caption }}</QItemLabel>
+      </QItemSection>
+    </RouterLink>
+  </QItem>
 </template>
 
 <style scoped lang="scss">

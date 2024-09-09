@@ -1,4 +1,4 @@
-import { EssentialLinkProps } from "src/components/EssentialLink.vue";
+import { EssentialLinkProps } from '@/types/props';
 
 export const pages: EssentialLinkProps[] = [
   {
