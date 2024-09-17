@@ -1,1 +1,0 @@
-import{a as s}from"./index-Bv0AtLjr.js";const t={xs:18,sm:24,md:32,lg:38,xl:46},u={size:String};function z(i,e=t){return s((()=>void 0!==i.size?{fontSize:i.size in e?`${e[i.size]}px`:i.size}:null))}export{z as a,t as b,u};
