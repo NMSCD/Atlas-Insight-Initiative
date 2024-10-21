@@ -30,7 +30,7 @@
     "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-json": "^4.0.1",
-    "eslint-plugin-vue": "^9.28.0",
+    "eslint-plugin-vue": "^9.29.1",
     "eslint-plugin-vue-scoped-css": "^2.8.1",
     "eslint-plugin-yml": "^1.14.0",
     "globals": "^15.11.0",
