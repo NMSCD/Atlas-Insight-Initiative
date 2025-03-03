@@ -25,7 +25,7 @@
     "@html-eslint/eslint-plugin": "^0.35.0",
     "@html-eslint/parser": "^0.35.0",
     "@quasar/vite-plugin": "^1.9.0",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.8",
     "@vitejs/plugin-vue": "^5.2.0",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
