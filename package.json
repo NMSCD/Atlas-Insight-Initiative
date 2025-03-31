@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",
-    "@html-eslint/eslint-plugin": "^0.36.0",
-    "@html-eslint/parser": "^0.36.0",
+    "@html-eslint/eslint-plugin": "^0.37.0",
+    "@html-eslint/parser": "^0.37.0",
     "@quasar/vite-plugin": "^1.9.0",
     "@types/node": "^22.13.14",
     "@vitejs/plugin-vue": "^5.2.3",
