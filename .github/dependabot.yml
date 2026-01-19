@@ -10,10 +10,6 @@ updates:
     target-branch: 'dev'
     schedule:
       interval: 'weekly'
-    groups:
-      eslint:
-        patterns:
-          - '*eslint*'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
