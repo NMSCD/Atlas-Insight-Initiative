@@ -23,26 +23,13 @@
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.2",
-    "@html-eslint/eslint-plugin": "^0.53.0",
-    "@html-eslint/parser": "^0.53.0",
     "@quasar/vite-plugin": "^1.10.0",
     "@types/node": "^25.0.9",
     "@vitejs/plugin-vue": "^6.0.3",
-    "eslint": "^9.39.2",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-json": "^4.0.1",
-    "eslint-plugin-vue": "^10.7.0",
-    "eslint-plugin-vue-scoped-css": "^2.12.0",
-    "eslint-plugin-yml": "^2.0.1",
-    "globals": "^17.0.0",
     "oxfmt": "^0.26.0",
     "oxlint": "^1.41.0",
-    "prettier": "^3.8.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.53.0",
     "vite": "^7.3.1",
-    "vue-eslint-parser": "^10.2.0",
     "vue-tsc": "^3.2.2"
   }
 }
