@@ -10,8 +10,10 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint ./",
-    "format": "prettier --write src/"
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "lint:ci": "oxlint --deny-warnings"
   },
   "dependencies": {
     "@quasar/extras": "^1.17.0",
