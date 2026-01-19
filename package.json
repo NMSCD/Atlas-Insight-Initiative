@@ -1,11 +1,10 @@
 {
   "name": "atlas-insight-initiative-website",
   "version": "0.0.1",
+  "private": true,
   "description": "Website for the Atlas Insight Initiative",
-  "productName": "Atlas Insight Initiative",
   "author": "NMSCD",
   "type": "module",
-  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -31,5 +30,6 @@
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vue-tsc": "^3.2.2"
-  }
+  },
+  "productName": "Atlas Insight Initiative"
 }

@@ -11,7 +11,5 @@
   "useTabs": false,
   "vueIndentScriptAndStyle": false,
   "singleAttributePerLine": true,
-  "ignorePatterns": [
-    "/dist"
-  ]
+  "ignorePatterns": ["/dist"]
 }
