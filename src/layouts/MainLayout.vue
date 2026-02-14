@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import EssentialLink from '@/components/EssentialLink.vue';
 import EssentialLinkInternal from '@/components/EssentialLinkInternal.vue';
+import type { EssentialLinkProps } from '@/types/props';
 import { pages } from '@/variables/objects';
-import { useRoute, useRouter } from 'vue-router';
-import { EssentialLinkProps } from '@/types/props';
+import { ref } from 'vue';
 
 const route = useRoute();
 const router = useRouter();

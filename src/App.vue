@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import { Dark } from 'quasar';
+import { onMounted } from 'vue';
 
 onMounted(() => {
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const prefersDark = globalThis.matchMedia('(prefers-color-scheme: dark)').matches;
   Dark.set(prefersDark);
 });
 </script>

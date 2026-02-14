@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { EssentialLinkProps } from '@/types/props';
+import type { EssentialLinkProps } from '@/types/props';
 
 withDefaults(defineProps<EssentialLinkProps>(), {
   caption: '',
