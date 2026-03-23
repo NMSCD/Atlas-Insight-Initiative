@@ -24,7 +24,7 @@
   "devDependencies": {
     "@quasar/vite-plugin": "^1.11.0",
     "@types/node": "^25.5.0",
-    "@vitejs/plugin-vue": "^6.0.4",
+    "@vitejs/plugin-vue": "^6.0.5",
     "oxfmt": "^0.40.0",
     "oxlint": "^1.56.0",
     "typescript": "^5.9.3",
