@@ -15,7 +15,7 @@
     "lint:ci": "oxlint --deny-warnings"
   },
   "dependencies": {
-    "@quasar/extras": "^2.0.1",
+    "@quasar/extras": "^2.0.4",
     "quasar": "^2.23.3",
     "sass": "^1.102.0",
     "vue": "^3.5.39",
