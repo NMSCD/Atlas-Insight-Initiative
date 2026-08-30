@@ -28,7 +28,7 @@
     "oxfmt": "^0.62.0",
     "oxlint": "^1.78.0",
     "typescript": "^5.9.3",
-    "vite": "^8.2.1",
+    "vite": "^8.2.2",
     "vue-tsc": "^3.3.9"
   },
   "productName": "Atlas Insight Initiative"
