@@ -22,7 +22,7 @@
     "vue-router": "^5.2.0"
   },
   "devDependencies": {
-    "@quasar/vite-plugin": "^2.0.0",
+    "@quasar/vite-plugin": "^2.0.2",
     "@types/node": "^26.2.0",
     "@vitejs/plugin-vue": "^6.0.8",
     "oxfmt": "^0.62.0",
